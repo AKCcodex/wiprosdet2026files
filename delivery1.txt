@@ -1,0 +1,6 @@
+----- DELIVERY DETAILS -----
+Order ID: 1
+Customer: ashish
+Item: pizza
+Status: Delivered
+Time: 10:30AM

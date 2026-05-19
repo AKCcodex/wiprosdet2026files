@@ -685,17 +685,17 @@ public class CompanyManagementSystem {
 
         deptMap.forEach((dept, empList) -> {
 
-            if (filterDept == null
-                    || dept.equalsIgnoreCase(filterDept)) {
-
-                System.out.println("\nDepartment: " + dept);
-
-                empList.forEach(emp ->
-                        System.out.println(
-                                " - " + emp.getName()
-                        ));
-            }
-        });
+//            if (filterDept == null
+//                    || dept.equalsIgnoreCase(filterDept)) {
+//
+//                System.out.println("\nDepartment: " + dept);
+//
+//                empList.forEach(emp ->
+//                        System.out.println(
+//                                " - " + emp.getName()
+//                        ));
+//            }
+//        });
 
         // STEP 5
 

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="2" total="4" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-05-22T17:47:20 IST" name="TestSuite" finished-at="2026-05-22T17:47:20 IST" duration-ms="153">
+    <groups>
+      <group name="smoke">
+        <method signature="GroupingDemo.loginTest()[pri:0, instance:day25.GroupingDemo@5b239d7d]" name="loginTest" class="day25.GroupingDemo"/>
+        <method signature="GroupingDemo.searchTest()[pri:0, instance:day25.GroupingDemo@5b239d7d]" name="searchTest" class="day25.GroupingDemo"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test started-at="2026-05-22T17:47:20 IST" name="SmokeTests" finished-at="2026-05-22T17:47:20 IST" duration-ms="153">
+      <class name="day25.GroupingDemo">
+        <test-method signature="loginTest()[pri:0, instance:day25.GroupingDemo@5b239d7d]" started-at="2026-05-22T17:47:20 IST" name="loginTest" finished-at="2026-05-22T17:47:20 IST" duration-ms="32" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method signature="searchTest()[pri:0, instance:day25.GroupingDemo@5b239d7d]" started-at="2026-05-22T17:47:20 IST" name="searchTest" finished-at="2026-05-22T17:47:20 IST" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchTest -->
+      </class> <!-- day25.GroupingDemo -->
+    </test> <!-- SmokeTests -->
+  </suite> <!-- TestSuite -->
+</testng-results>

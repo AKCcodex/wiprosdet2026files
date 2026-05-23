@@ -1,0 +1,6 @@
+----- INVOICE -----
+Order ID: 99
+Product: 
+gautamQuantity: 
+1Total: 
+2.0

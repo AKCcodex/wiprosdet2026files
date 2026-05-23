@@ -1,0 +1,14 @@
+package day2;
+
+public class rightangle {
+public static void main(String[] args) {
+	int num=4;
+	int alpha=1;
+	while(alpha<=num) {
+		for(int i=0;i<=alpha;i++) {
+			System.out.print("*");
+		}
+		System.out.println("");
+	}
+}
+}

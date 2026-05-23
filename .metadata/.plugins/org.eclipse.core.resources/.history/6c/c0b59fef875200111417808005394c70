@@ -1,0 +1,60 @@
+package testCases;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class amazon {
+	public static void main(String[] args) throws InterruptedException   {
+		 WebDriver driver1 = new ChromeDriver();
+		 driver1.get("https://www.amazon.in/ap/signin?openid.pape.max_auth_age=900&openid.return_to=https%3A%2F%2Fwww.amazon.in%2Fgp%2Fyourstore%2Fhome%3Fpath%3D%252Fgp%252Fyourstore%252Fhome%26useRedirectOnSuccess%3D1%26signIn%3D1%26action%3Dsign-out%26ref_%3Dnav_AccountFlyout_signout&openid.assoc_handle=inflex&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0");
+		 driver1.manage().window().maximize();
+		 Thread.sleep(2000);
+
+		 
+		 driver1.findElement(By.id("ap_email_login")).sendKeys("9097826201");
+		 driver1.findElement(By.id("continue")).click();
+		 Thread.sleep(2000);
+		 driver1.findElement(By.xpath("//*[@id='ap_password']"))
+	      .sendKeys("https://www.lamy.com/en-in?localeRedirect=12");
+		driver1.findElement(By.id("signInSubmit")).click();
+		Thread.sleep(2000);
+		driver1.get("https://www.amazon.in/iPhone-Air-256-GB-Promotion/dp/B0FQFTV1NP/ref=rtpb_tpfy_d_sccl_2/524-8710285-4499645?pd_rd_w=dJfEr&content-id=amzn1.sym.e5c41f1c-dd62-4431-9104-e9c4f898e8e4&pf_rd_p=e5c41f1c-dd62-4431-9104-e9c4f898e8e4&pf_rd_r=P50NW8DD7D8BZ5ZPK1P6&pd_rd_wg=ivwxi&pd_rd_r=e1fcd5f8-726c-4ac1-aa20-39fe27625105&pd_rd_i=B0FQFTV1NP&psc=1");
+		
+		driver1.findElement(By.id("add-to-cart-button")).click();
+		Thread.sleep(1000);
+		  driver1.quit();
+//		 driver1.findElement(By.id("add-to-cart-sauce-labs-backpack")).click();
+//		 Thread.sleep(1000);
+//
+//		 
+//		 driver1.findElement(By.className("shopping_cart_link")).click();
+//		 Thread.sleep(2000);
+//
+//		 
+//		 driver1.findElement(By.id("checkout")).click();
+//		 Thread.sleep(2000);
+//
+//		 
+//		 driver1.findElement(By.id("first-name")).sendKeys("Ashish");
+//		 driver1.findElement(By.id("last-name")).sendKeys("Choudhary");
+//		 driver1.findElement(By.id("postal-code")).sendKeys("110001");
+//		 Thread.sleep(1000);
+//
+//		 
+//		 driver1.findElement(By.id("continue")).click();
+//		 Thread.sleep(2000);
+//
+//		 
+//		 driver1.findElement(By.id("finish")).click();
+//		 Thread.sleep(2000);
+//
+//		
+//		 System.out.println("Order placed! Title: " + driver1.getTitle());
+//		 System.out.println("Confirmation: " + driver1.findElement(By.className("complete-header")).getText());
+//
+//		 Thread.sleep(3000);
+		
+
+	}
+}

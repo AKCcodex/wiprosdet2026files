@@ -1,0 +1,66 @@
+package testCases;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+public class tc_banl {
+	 public static void main(String[] args) throws InterruptedException {
+
+	        WebDriver driver = new ChromeDriver();
+	        //signup 
+//	        driver.get("https://parabank.parasoft.com/parabank/register.htm");
+//	   	 driver.findElement(By.id("customer.firstName")).sendKeys("Ashish");
+//	   	 driver.findElement(By.id("customer.lastName")).sendKeys("Choudhary");
+//	   	 driver.findElement(By.id("customer.address.street")).sendKeys("dilchand");
+//	   	 driver.findElement(By.id("customer.address.city")).sendKeys("danapur");
+//	   	 driver.findElement(By.id("customer.address.state")).sendKeys("bihar");
+//	   	 driver.findElement(By.id("customer.address.zipCode")).sendKeys("801503");
+//	   	 driver.findElement(By.id("customer.phoneNumber")).sendKeys("9097826201");
+//	   	 driver.findElement(By.id("customer.ssn")).sendKeys("745812asd");
+//	   	 driver.findElement(By.id("customer.username")).sendKeys("Ashish12345");
+//	   	 driver.findElement(By.id("customer.password")).sendKeys("Qazwsx@123");
+//	   	 driver.findElement(By.id("repeatedPassword")).sendKeys("Qazwsx@123");
+//	   	 
+//	   	 driver.findElement(By.xpath("/html/body/div[1]/div[3]/div[2]/form/table/tbody/tr[13]/td[2]/input")).click();
+//	   	 
+//	   	 Thread.sleep(2000);
+	   	 //login
+	        driver.get("https://parabank.parasoft.com/parabank/index.htm");
+	        driver.manage().window().maximize();
+	        Thread.sleep(2000);
+
+	 
+	        driver.findElement(By.name("username")).sendKeys("Ashish12345");
+	        driver.findElement(By.name("password")).sendKeys("Qazwsx@123");
+	        driver.findElement(By.xpath("//input[@value='Log In']")).click();
+	        Thread.sleep(2000);
+	        driver.findElement(By.xpath("/html/body/div[1]/div[3]/div[1]/ul/li[1]/a")).click();
+	        
+	        driver.findElement(By.xpath("/html/body/div[1]/div[3]/div[2]/div/div[1]/form/div/input")).click();
+	        Thread.sleep(5000);
+	        driver.findElement(By.linkText("Transfer Funds")).click();
+	        Thread.sleep(2000);
+
+	
+	        driver.findElement(By.id("amount")).sendKeys("500");
+	        Thread.sleep(1000);
+
+
+	        new Select(driver.findElement(By.id("fromAccountId"))).selectByIndex(0);
+	        Thread.sleep(1000);
+
+
+	        new Select(driver.findElement(By.id("toAccountId"))).selectByIndex(1);
+	        Thread.sleep(1000);
+
+
+	        driver.findElement(By.xpath("//input[@value='Transfer']")).click();
+	        Thread.sleep(2000);
+
+
+
+	        Thread.sleep(2000);
+	      driver.quit();
+	    }
+}

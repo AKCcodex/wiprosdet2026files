@@ -1,0 +1,55 @@
+package testCases;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class amazon {
+	public static void main(String[] args) throws InterruptedException   {
+		 WebDriver driver1 = new ChromeDriver();
+		 driver1.get("https://www.amazon.in/ap/signin?openid.pape.max_auth_age=900&openid.return_to=https%3A%2F%2Fwww.amazon.in%2Fgp%2Fyourstore%2Fhome%3Fpath%3D%252Fgp%252Fyourstore%252Fhome%26useRedirectOnSuccess%3D1%26signIn%3D1%26action%3Dsign-out%26ref_%3Dnav_AccountFlyout_signout&openid.assoc_handle=inflex&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0");
+		 driver1.manage().window().maximize();
+		 Thread.sleep(2000);
+
+		 
+		 driver1.findElement(By.id("ap_email_login")).sendKeys("9097826201");
+		 driver1.findElement(By.id("continue")).click();
+		 driver1.findElement(By.id("password")).sendKeys("https://www.lamy.com/en-in?localeRedirect=12");
+		driver1.findElement(By.id("signInSubmit")).click();
+//		 Thread.sleep(2000);
+//
+//		 
+//		 driver1.findElement(By.id("add-to-cart-sauce-labs-backpack")).click();
+//		 Thread.sleep(1000);
+//
+//		 
+//		 driver1.findElement(By.className("shopping_cart_link")).click();
+//		 Thread.sleep(2000);
+//
+//		 
+//		 driver1.findElement(By.id("checkout")).click();
+//		 Thread.sleep(2000);
+//
+//		 
+//		 driver1.findElement(By.id("first-name")).sendKeys("Ashish");
+//		 driver1.findElement(By.id("last-name")).sendKeys("Choudhary");
+//		 driver1.findElement(By.id("postal-code")).sendKeys("110001");
+//		 Thread.sleep(1000);
+//
+//		 
+//		 driver1.findElement(By.id("continue")).click();
+//		 Thread.sleep(2000);
+//
+//		 
+//		 driver1.findElement(By.id("finish")).click();
+//		 Thread.sleep(2000);
+//
+//		
+//		 System.out.println("Order placed! Title: " + driver1.getTitle());
+//		 System.out.println("Confirmation: " + driver1.findElement(By.className("complete-header")).getText());
+//
+//		 Thread.sleep(3000);
+//		 driver1.quit();
+
+	}
+}

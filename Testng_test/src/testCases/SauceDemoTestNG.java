@@ -1,0 +1,75 @@
+package testCases;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+public class SauceDemoTestNG {
+
+	WebDriver driver;
+
+	@BeforeMethod
+	public void setup() {
+
+		// Launch Firefox Browser
+		driver = new FirefoxDriver();
+
+		driver.get("https://www.saucedemo.com/");
+		driver.manage().window().maximize();
+	}
+
+	@Test
+	public void placeOrderTest() throws InterruptedException {
+
+		// Login
+		driver.findElement(By.id("user-name")).sendKeys("standard_user");
+		driver.findElement(By.id("password")).sendKeys("secret_sauce");
+		driver.findElement(By.id("login-button")).click();
+		Thread.sleep(2000);
+
+		// Add product to cart
+		driver.findElement(By.id("add-to-cart-sauce-labs-backpack")).click();
+		Thread.sleep(1000);
+
+		// Open cart
+		driver.findElement(By.className("shopping_cart_link")).click();
+		Thread.sleep(2000);
+
+		// Checkout
+		driver.findElement(By.id("checkout")).click();
+		Thread.sleep(2000);
+
+		// Enter details
+		driver.findElement(By.id("first-name")).sendKeys("Ashish");
+		driver.findElement(By.id("last-name")).sendKeys("Choudhary");
+		driver.findElement(By.id("postal-code")).sendKeys("110001");
+		Thread.sleep(1000);
+
+		// Continue
+		driver.findElement(By.id("continue")).click();
+		Thread.sleep(2000);
+
+		// Finish order
+		driver.findElement(By.id("finish")).click();
+		Thread.sleep(2000);
+
+		// Validation
+		String confirmationMessage = driver.findElement(By.className("complete-header")).getText();
+
+		System.out.println("Order placed! Title: " + driver.getTitle());
+		System.out.println("Confirmation: " + confirmationMessage);
+
+		Assert.assertEquals(confirmationMessage, "Thank you for your order!");
+	}
+
+	@AfterMethod
+	public void tearDown() throws InterruptedException {
+
+		Thread.sleep(3000);
+		driver.quit();
+	}
+}

@@ -1,0 +1,89 @@
+package wipro_basic;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.JavascriptExecutor;
+public class SauceDemoTest {
+	  public static void main(String[] args) throws InterruptedException {
+
+
+//	        WebDriver driver = new ChromeDriver();
+//	        driver.get("https://www.saucedemo.com/");
+//	        driver.manage().window().maximize();
+//	        Thread.sleep(2000);
+//	        driver.findElement(By.id("user-name")).sendKeys("standard_user");
+//	        driver.findElement(By.id("password")).sendKeys("secret_sauce");
+//	        driver.findElement(By.id("login-button")).click();
+//	        Thread.sleep(5000);
+//	        System.out.println(driver.getTitle());
+//	        driver.quit();
+	        
+//	        WebDriver driver3 = new ChromeDriver();
+//	        driver3.get("https://leetcode.com/accounts/login/");
+//	        driver3.manage().window().maximize();
+//	        
+//	        driver3.findElement(By.id("id_login"))
+//	        .sendKeys("ashishchoudharythefuture@gmail.com");
+//
+//	        driver3.findElement(By.id("id_password"))
+//	        .sendKeys("'SK!uf8h>qAfvdQ");
+//
+//	
+//	 driver3.findElement(By.xpath("//button[contains(text(),'Sign In')]"))
+//	        .click();
+//
+//	        Thread.sleep(5000);
+//	        Thread.sleep(2000);
+//	        driver3.findElement(By.id("ap_email_login")).sendKeys("9097826201");
+//
+//	        driver3.findElement(By.id("continue")).click();
+//	        System.out.println(driver3.getTitle());
+//	        driver3.quit();
+//	        
+//	        
+//	        
+	        
+//	        WebDriver driver1 = new ChromeDriver();
+//	        driver1.get("https://skill-assist.ai/wipro/auth");
+//	        driver1.manage().window().maximize();
+//	        Thread.sleep(2000);
+//	        driver1.findElement(By.id("signin-email")).sendKeys("ashishchoudharythefuture@gmail.com");
+//	        Thread.sleep(2000);
+//	        driver1.findElement(By.id("signin-password")).sendKeys("Qazwsx@123");
+//	        Thread.sleep(5000);
+//	        WebElement btn = driver1.findElement(
+//	        	    By.xpath("//*[@id=\"root\"]/div[2]/div[1]/div[2]/div/form/button")
+//	        	);
+//	        Thread.sleep(5000);
+//	        btn.click();
+//	        Thread.sleep(2000);
+//	        System.out.println(driver1.getTitle());
+//	        Thread.sleep(12000);
+//	        driver1.quit();
+		  
+			  WebDriver driver1 = new ChromeDriver();
+	        driver1.get("https://accounts.spotify.com/en/login?login_hint=ashishchoudharyieee%40gmail.com&continue=https%3A%2F%2Fopen.spotify.com%2Fsearch%2Fopen%2520gungal%2520style%3Fflow_ctx%3D91f60dea-8538-429b-a34a-f649250040e4%253A1778948299&flow_ctx=91f60dea-8538-429b-a34a-f649250040e4&allow_password=1");
+	        driver1.manage().window().maximize();
+	        
+	        Thread.sleep(2000);
+	        driver1.findElement(By.id("password")).sendKeys("?e@i^!!Z8C$h;K2");
+	       
+//	        driver1.findElement(By.id("login-button")).click();
+	        WebElement loginBtn = driver1.findElement(
+	        	    By.cssSelector("[data-testid='login-button']")
+	        	);
+	        	((JavascriptExecutor) driver1).executeScript("arguments[0].click();", loginBtn);
+	        	driver1.get("https://open.spotify.com/search/gangnam%20style");
+	        	Thread.sleep(5000);
+
+	        	WebElement playBtn = driver1.findElement(
+	        		    By.cssSelector("[data-testid='play-button']")
+	        		);
+	        		((JavascriptExecutor) driver1).executeScript("arguments[0].click();", playBtn);
+	        	System.out.println(driver1.getTitle());
+	        Thread.sleep(30000);
+	        
+
+	    }
+}

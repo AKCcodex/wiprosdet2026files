@@ -1,0 +1,48 @@
+package testCases;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+public class tc_banl {
+	 public static void main(String[] args) throws InterruptedException {
+
+	        WebDriver driver = new ChromeDriver();
+	        driver.get("https://parabank.parasoft.com/parabank/index.htm");
+	        driver.manage().window().maximize();
+	        Thread.sleep(2000);
+
+	 
+	        driver.findElement(By.name("username")).sendKeys("Ashish12345");
+	        driver.findElement(By.name("password")).sendKeys("Qazwsx@123");
+	        driver.findElement(By.xpath("//input[@value='Log In']")).click();
+	        Thread.sleep(2000);
+
+
+	        driver.findElement(By.linkText("Transfer Funds")).click();
+	        Thread.sleep(2000);
+
+	
+	        driver.findElement(By.id("amount")).sendKeys("500");
+	        Thread.sleep(1000);
+
+
+	        Select fromAccount = new Select(driver.findElement(By.id("fromAccountId")));
+	        fromAccount.selectByIndex(0);
+	        Thread.sleep(1000);
+
+
+	        Select toAccount = new Select(driver.findElement(By.id("toAccountId")));
+	        toAccount.selectByIndex(1);
+	        Thread.sleep(1000);
+
+
+	        driver.findElement(By.xpath("//input[@value='Transfer']")).click();
+	        Thread.sleep(2000);
+
+
+
+	        Thread.sleep(2000);
+	      driver.quit();
+	    }
+}

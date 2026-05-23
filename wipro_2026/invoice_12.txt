@@ -1,0 +1,6 @@
+----- INVOICE -----
+Order ID: 12
+Product: 
+keyboardQuantity: 
+1Total: 
+5000.0

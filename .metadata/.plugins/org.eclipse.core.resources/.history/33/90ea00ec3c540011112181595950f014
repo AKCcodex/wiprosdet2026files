@@ -1,0 +1,25 @@
+package day24;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
+import org.testng.annotations.*;
+
+public class textbox 
+{
+
+	public static void main(String[] args) throws InterruptedException   {
+		 WebDriver driver1 = new ChromeDriver();
+		 driver1.get("https://demoqa.com/select-menu");
+		 driver1.manage().window().maximize();
+		 Thread.sleep(2000);
+
+		 
+		 new Select(driver1.findElement(By.id("react-select-7-placeholder")))
+	        .selectByVisibleText("Blue");
+		 driver1.quit();
+
+	}
+}

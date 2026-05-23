@@ -1,0 +1,6 @@
+----- MEDICAL REPORT -----
+Patient ID: 101
+Name: ashihs
+Doctor: prashant
+Diagnosis: diabetes
+Treatment: meads

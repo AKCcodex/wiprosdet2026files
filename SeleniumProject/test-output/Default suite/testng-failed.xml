@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="day23.tc_bank_TestNG">
+      <class name="day23.SauceDemoTestNG">
         <methods>
-          <include name="reg"/>
-          <include name="setup"/>
-          <include name="beforeTest"/>
+          <include name="verifyProductPage"/>
           <include name="afterTest"/>
           <include name="tearDown"/>
+          <include name="beforeTest"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- day23.tc_bank_TestNG -->
+      </class> <!-- day23.SauceDemoTestNG -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

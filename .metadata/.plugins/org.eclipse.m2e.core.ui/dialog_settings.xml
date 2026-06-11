@@ -49,12 +49,16 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="com.ATP-E2E"/>
+			<item value="com.docker"/>
 			<item value="com.day28"/>
 			<item value="com.test"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="ATP_test"/>
+			<item value="docker"/>
 			<item value="day28"/>
 			<item value="com.test"/>
 		</list>

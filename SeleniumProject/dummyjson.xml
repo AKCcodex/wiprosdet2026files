@@ -1,0 +1,31 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="DummyJSON API Suite">
+
+    <test name="Selected API Tests">
+
+        <classes>
+
+            <class name="day28.DummyJsonUsersAPI">
+
+                <methods>
+
+                    <include name="getAllUsersTest"/>
+                    <include name="getSingleUserTest"/>
+                    <include name="searchUserTest"/>
+                    <include name="filterUsersTest"/>
+                    <include name="sortUsersTest"/>
+                    <include name="addUserTest"/> 
+                   <include name="updateUserTest"/> 
+                    	<include name="deleteUserTest"/>
+                   
+                   
+                </methods>
+
+            </class>
+
+        </classes>
+
+    </test>
+
+</suite>
